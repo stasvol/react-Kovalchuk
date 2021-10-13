@@ -11,7 +11,7 @@ const SEARCH_PATH = '/search';
 const SEARCH_PARAM = 'query=';
 const PAGE_HITS = 'hitsPerPage=';
 const PAGE_PARAM = 'page=';
-const UNITE = BASE_PATH + SEARCH_PATH + SEARCH_PARAM;
+const UNITES = BASE_PATH + SEARCH_PATH + SEARCH_PARAM;
 
 const HITS = [
   {
@@ -47,7 +47,9 @@ class News extends Component {
 
   fetchData = (searchQuery, hitsPerPage, page) => {
     fetch(
-      `${UNITE}${searchQuery}&${PAGE_HITS}${hitsPerPage}&${PAGE_PARAM}${page}`,
+      `${UNITES}${searchQuery}&${PAGE_HITS}${hitsPerPage}&${PAGE_PARAM}${page}`,
+      //  eslint-disable-next-line max-len
+      // `${BASE_PATH}${SEARCH_PATH}${SEARCH_PARAM}${searchQuery}&${PAGE_HITS}${hitsPerPage}&${PAGE_PARAM}${page}`,
     )
       .then(res => res.json())
       .then(result => this.setNews(result))

@@ -18,8 +18,6 @@ const FILTERS_BTN = [
   },
 ];
 
-let a;
-
 const Footer = ({ amount, activeFilter, changeFilter }) => (
   <div className="footer">
     <span className="amount">{`${amount} Tasks left`}</span>

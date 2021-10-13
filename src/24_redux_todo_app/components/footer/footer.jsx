@@ -3,8 +3,6 @@ import PropTypes from 'prop-types';
 
 import './footer.css';
 
-var b;
-
 const FILTERS_BTN = [
   {
     text: 'All',
